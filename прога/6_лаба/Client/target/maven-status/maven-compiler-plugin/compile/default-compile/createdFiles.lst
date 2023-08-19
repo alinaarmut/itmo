@@ -1,0 +1,13 @@
+itmo/progg/managers_client/Client.class
+itmo/progg/managers_client/description_client/MovieBuilder.class
+itmo/progg/managers_client/description_client/Location.class
+itmo/progg/managers_client/description_client/ColorHair.class
+itmo/progg/managers_client/description_client/CoordinatesClient.class
+itmo/progg/managers_client/description_client/Person.class
+itmo/progg/managers_client/description_client/MpaaRating.class
+itmo/progg/managers_client/example/Main.class
+itmo/progg/managers_client/CustomScanner.class
+itmo/progg/managers_client/description_client/MovieGenre.class
+itmo/progg/managers_client/Worker.class
+itmo/progg/managers_client/description_client/Execution.class
+itmo/progg/managers_client/description_client/Color.class
