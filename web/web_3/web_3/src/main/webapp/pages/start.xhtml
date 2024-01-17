@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+   <h:head>
+      <title>Стартовая страница</title>
+      <h:outputStylesheet library="css" name="style_start_page.css"/>
+      <h:outputScript library="js" name="time.js"/>
+
+   </h:head>
+   <h:body>
+      <div id="header">
+         Армут Алина Юсуфовна P3214
+         <br/>Лабораторная №3
+         <br/>Вариант:2458
+      </div>
+      <h:panelGroup styleClass="center" style="padding: 25px; margin-top: 100px;">
+         <h:outputText value="Сегодня:" style="color:black" />
+         <h:outputText value=" " />
+         <h:outputText value="" style="color:silver; font-size:14px;" />
+         <h:outputText id="clockdat" style="color:black;" />
+      </h:panelGroup>
+      <br></br>
+      <h:button class="button" outcome="go-to-main" value="Переход на основную страницу"/>
+   </h:body>
+</f:view>
+</html>
