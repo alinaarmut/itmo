@@ -1,0 +1,43 @@
+#header {
+    height: 80px;
+    /*background-color: antiquewhite;*/
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+.button {
+    background-color: #9370db;
+    border-radius: 100px;
+    box-shadow: rgba(173, 120, 205, .2) 0 -25px 18px -14px inset, rgba(173, 120, 205, .15) 0 1px 2px, rgba(173, 120, 205, .15) 0 2px 4px, rgba(173, 120, 205, .15) 0 4px 8px, rgba(173, 120, 205, .15) 0 8px 16px, rgba(173, 120, 205, .15) 0 16px 32px;
+    color: whitesmoke;
+    cursor: pointer;
+    display: inline-block;
+    font-family:"South Park Cyrillic Regular", cursive;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 0.5%;
+    justify-self: center;
+}
+
+.button:hover {
+    box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+}
+body {
+    background-image: url("../img/gen.png");
+    text-align: center;
+    font-family: "South Park Cyrillic Regular", cursive;
+}
+@font-face {
+    font-family: "South Park Cyrillic Regular";
+    src: url("../fonts/South_Park_Fonts/fonts_sp-font-cyr2.ttf");
+}
+

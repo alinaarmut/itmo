@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="FacetManager">
+    <facet type="jpa" name="JPA">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <setting name="provider-name" value="EclipseLink" />
+        <datasource-mapping>
+          <factory-entry name="ExamplePU" value="635c38ec-875c-464b-ad03-e9ffdc7f22b6" />
+          <factory-entry name="amaPU" value="65a15cbe-43b4-4a6b-a0f5-b3eb86ab1297" />
+          <factory-entry name="examplePU" />
+          <factory-entry name="web_3" />
+        </datasource-mapping>
+        <naming-strategy-map />
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
+      </configuration>
+    </facet>
+  </component>
+</module>
