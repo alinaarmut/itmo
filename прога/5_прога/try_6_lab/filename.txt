@@ -1,0 +1,2 @@
+insert_id 2
+чебурашка,1,2,6,G,COMEDY,2023-04-10,3,aa,3,BLUE,BLUE,aa,2,2
