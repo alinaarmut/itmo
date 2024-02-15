@@ -1,0 +1,20 @@
+<div class="back-ground">
+<button class="bigButtons" routerLink="/">Back</button>
+<div class="formBlock">
+  <div class="formContainer">
+    <h2 style="color: black;">Register Form</h2>
+    <form id="registerForm">
+      <label for="loginNew">Login:</label>
+      <input type="text" id="loginNew" name="login" required [(ngModel)]="dataRegister.username" (input)="checkInput()">
+      <br/>
+      <label for="passwordNew">Password:</label>
+      <input type="password" id="passwordNew" name="password" required [(ngModel)]="dataRegister.password" (input)="checkInput()">
+      <br/>
+      <button class="bigButtons" type="submit" (click)="tryRegistration()">Submit</button>
+      <div id="error" *ngIf="isTextVisible">
+        <p>{{ errorMessage }}</p>
+      </div>
+    </form>
+  </div>
+</div>
+</div>

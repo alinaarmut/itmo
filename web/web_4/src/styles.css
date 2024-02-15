@@ -1,0 +1,14 @@
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #08050a;
+}
+
+button.p-element.p-ripple.p-autocomplete-dropdown.p-button-icon-only.p-button.p-component.ng-star-inserted{
+  background: #e42575;
+  border-color: #e42575;
+}

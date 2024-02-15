@@ -1,0 +1,20 @@
+<div class="back-ground">
+<button class="bigButtons" routerLink="/">Back</button>
+<div class="formBlock">
+  <div class="formContainer">
+    <h2>Login Form</h2>
+    <form id="loginForm">
+      <label for="loginNew">Login:</label>
+      <input type="text" id="loginNew" name="login" required [(ngModel)]="dataLogin.username" (input)="checkInput()">
+      <br/>
+      <label for="passwordNew">Password:</label>
+      <input type="password" id="passwordNew" name="password" required [(ngModel)]="dataLogin.password" (input)="checkInput()">
+      <br/>
+      <button class="bigButtons" type="submit" (click)="tryLogin()">Submit</button>
+      <div id="error" *ngIf="isTextVisible">
+        <p>{{ errorMessage }}</p>
+      </div>
+    </form>
+  </div>
+</div>
+</div>

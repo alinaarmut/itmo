@@ -1,0 +1,261 @@
+
+.custom-listbox {
+  width: 200px; /* Задаем желаемую ширину */
+  max-height: 150px; /* Задаем максимальную высоту */
+}
+h2 {
+  margin: 0;
+  padding: 0;
+  color: #f5f3f7;
+}
+
+h2:first-letter{
+  color: #f5f3f7;
+}
+
+.workZone {
+  width: 100%;
+  /*display: grid;*/
+  /*grid-template-rows: 520px 1fr;*/
+  /*background-color: #08050a;*/
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  flex: 1 0 calc(50% - 30px);
+  margin: 5px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 1265px) {
+  .item {
+    flex: 1 0 calc(100%);
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+@media screen and (max-width: 787px) {
+  .item {
+    flex: 1 0 calc(100%);
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+#form {
+  height: 450px;
+  text-align: center;
+  border: 5px solid #1c1326;
+  padding: 20px;
+  margin-top: 40px;
+  color: #f5f3f7;
+  font-size: 22px;
+
+}
+
+@media screen and (max-width: 1265px) {
+  #form {
+    height: 450px;
+    text-align: center;
+    border: 4px solid #1c1326;
+    padding: 16px;
+    margin-top: 30px;
+    color: #f5f3f7;
+    font-size: 20px;
+
+  }
+}
+
+@media screen and (max-width: 787px) {
+  #form {
+    height: 430px;
+    text-align: center;
+    border: 3px solid #1c1326;
+    padding: 12px;
+    margin-top: 20px;
+    color: #f5f3f7;
+    font-size: 18px;
+
+  }
+}
+
+
+#structForm {
+  text-align: center;
+  align-items: center;
+}
+
+input#y{
+  width: 150px;
+  height: 30px;
+  background-color: #1c1326;
+  color: white;
+  border: 3px solid #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
+.button1 {
+  width: 60px;
+  height: 30px;
+  padding: 7px 14px;
+  margin-right: 2px;
+  margin-left: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  border: 0px solid #ccc;
+  background-color: #9370db;
+  border-radius: 10px;
+}
+
+.button1:hover {
+  background-color: #9370db;
+}
+
+.button1.active {
+  background-color: #9370db;
+  color: #fff;
+}
+
+.button2 {
+  width: 60px;
+  height: 30px;
+  padding: 7px 14px;
+  margin-right: 2px;
+  margin-left: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  border: 0px solid #ccc;
+  background-color: #9370db;
+  border-radius: 10px;
+}
+
+.button2:hover {
+  background-color: #9370db;
+}
+
+.button2.active {
+  background-color: #9370db;
+  color: #fff;
+}
+
+.x-input select {
+  width: 150px;
+  height: 30px;
+  background-color: #1c1326;
+  color: white;
+  border: 3px solid #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.r-input select {
+  width: 150px;
+  height: 30px;
+  background-color: #1c1326;
+  color: whitesmoke;
+  border: 3px solid #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.bigButtons{
+  padding: 12px 26px;
+  margin-top: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  border: 0 solid #ccc;
+  background-color: #9370db;
+  border-radius: 10px;
+  max-width: 200px;
+  max-height: 50px;
+}
+
+@media screen and (max-width: 1265px) {
+  .bigButtons{
+    padding: 10px 20px;
+    margin-top: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 0 solid #ccc;
+    background-color: #9370db;
+    border-radius: 8px;
+    max-width: 200px;
+    max-height: 50px;
+  }
+}
+@media screen and (max-width: 787px) {
+  .bigButtons {
+    padding: 5px 12px;
+    margin-top: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 0 solid #ccc;
+    background-color: #9370db;
+    border-radius: 6px;
+    max-width: 200px;
+    max-height: 50px;
+  }
+}
+
+
+.bigButtons:hover{
+  box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+
+#resultTable {
+  justify-content: space-evenly;
+  display: flex;
+  /*background-color: #08050a;*/
+  flex-grow: 1;
+}
+
+#table {
+  border-collapse: separate;
+  letter-spacing: 1px;
+  /*background-color: #1c1326;*/
+  color: #f5f3f7;
+  text-align: center;
+  border-radius: 16px;
+  border-spacing: 8px;
+  border: 2px solid #f5f3f7;
+  width: 70%;
+}
+
+.checkInput {
+  margin: 5px;
+  text-align: center;
+  font-size: 20px;
+  color: #9370db;
+}
+
+#error {
+  color: red;
+  font-size: 28px;
+}
+
+@media screen and (max-width: 1265px) {
+  #error {
+    color: red;
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 787px) {
+  #error {
+    color: red;
+    font-size: 20px;
+  }
+}

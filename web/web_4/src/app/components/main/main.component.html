@@ -1,0 +1,115 @@
+<div class="back-ground">
+<div class="workZone">
+  <div class="container">
+    <div class="item">
+      <div id="coordinatePanelWrapper">
+        <div id="coordinatePanel" style="width: 400px; height: 400px; display: block; margin-left: auto; margin-right: auto">
+          <h2>График R({{ showR }})</h2>
+          <br/>
+          <svg #svgElement width="400" height="400">
+            <line x1="0" y1="200" x2="400" y2="200" stroke="white" stroke-width="2"/>
+            <line x1="200" y1="0" x2="200" y2="400" stroke="white" stroke-width="2"/>
+            < !— стрелочки —>
+            <polygon points="400,200 390,195 390,205" fill="white"/>
+            <polygon points="200,0 195,10 205,10" fill="white"/>
+
+            < !— Четверть круга —>
+
+            <path  d="M200 200 L50 200 C55 110 110 55 200 50"
+                  fill="#1c1326" stroke="white" stroke-width="1"></path>
+<!--где 110 меняеть-->
+            <
+            !— Треугольник —>
+            <polygon points="275,200 200,200 200,275" fill="#1c1326" stroke="white" stroke-width="1"/>
+
+
+            < !— Прямоугольник —>
+            <polygon points="200,200 125,200 125,350 200,350" fill="#1c1326" stroke="white" stroke-width="1" />
+
+
+            < !— черточки X-->
+            <line x1="50" y1="195" x2="50" y2="205" stroke="white" stroke-width="2"/>
+            <line x1="125" y1="195" x2="125" y2="205" stroke="white" stroke-width="2"/>
+            <line x1="275" y1="195" x2="275" y2="205" stroke="white" stroke-width="2"/>
+            <line x1="350" y1="195" x2="350" y2="205" stroke="white" stroke-width="2"/>
+            <
+            !— черточки Y-->
+            <line x1="195" y1="50" x2="205" y2="50" stroke="white" stroke-width="2"/>
+            <line x1="195" y1="125" x2="205" y2="125" stroke="white" stroke-width="2"/>
+            <line x1="195" y1="275" x2="205" y2="275" stroke="white" stroke-width="2"/>
+            <line x1="195" y1="350" x2="205" y2="350" stroke="white" stroke-width="2"/>
+
+            <text className="svgR" id="R1" x="180" y="55" font-size="13" fill="ghostwhite">R</text>
+            <text className="svgRd2" id="R2" x="173" y="129" font-size="13" fill="ghostwhite">R/2</text>
+            <text className="svg-Rd2" id="R3" x="169" y="279" font-size="13" fill="ghostwhite">-R/2</text>
+            <text className="svg-R" id="R4" x="180" y="355" font-size="13" fill="ghostwhite">-R</text>
+
+            <text className="svg-R" id="R5" x="45" y="220" font-size="13" fill="ghostwhite">-R</text>
+            <text className="svg-Rd2" id="R6" x="110" y="220" font-size="13" fill="ghostwhite">-R/2</text>
+            <text className="svgRd2" id="R7" x="265" y="220" font-size="13" fill="ghostwhite">R/2</text>
+            <text className="svgR" id="R8" x="345" y="220" font-size="13" fill="ghostwhite">R</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <form class="item" (ngSubmit)="onSubmit()" #myForm="ngForm">
+      <div id="form">
+        <div id="structForm">
+          <br>
+          <div class="x-input" id="x-input">
+            <label>Choose X value:</label>
+
+
+                        <p-autoComplete [(ngModel)]="element.x" [dropdown]="true" [suggestions]="filteredValuesX"
+                                        (completeMethod)="filterValX($event)" (input)="checkInput()" id="xAuto"
+                                        [ngModelOptions]="{standalone: true}"></p-autoComplete>
+
+          </div>
+          <br/>
+          <div class="y-input" id="y-input">
+            <label>Choose Y value:</label>
+            <input type="text" pInputText placeholder="-3 to 3" [(ngModel)]="element.y" [ngModelOptions]="{standalone: true}" (input)="checkInput()"/>
+          </div>
+          <br/>
+          <div class="r-input" id="r-input">
+            <label>Choose R value:</label>
+            <p-autoComplete [(ngModel)]="element.r" [dropdown]="true" [suggestions]="filteredValuesR" (completeMethod)="filterValR($event)" id="rAuto" [ngModelOptions]="{standalone: true}" (ngModelChange)="graphChange($event)" (input)="checkInput()"></p-autoComplete>
+          </div>
+        </div>
+        <button type="submit" value="Confirm" class="bigButtons">Submit</button>
+        <div id="error" *ngIf="isTextVisible">
+          <p>{{ errorMessage }}</p>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>
+<br>
+<div id="resultTable">
+  <button class="bigButtons" (click)="logOut()">Logout</button>
+  <button class="bigButtons" (click)="clearModel()">Clear</button>
+  <table id="table">
+    <thead>
+    <tr>
+      <th>Result</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>R</th>
+      <th>Current Time</th>
+      <th>Script Time</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let el of modelList">
+      <td>{{ el.result }}</td>
+      <td>{{ el.x }}</td>
+      <td>{{ el.y }}</td>
+      <td>{{ el.r }}</td>
+      <td>{{ el.time }}</td>
+      <td>{{ el.scriptTime }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</div>
